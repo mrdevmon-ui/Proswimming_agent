@@ -1,13 +1,11 @@
-require('dotenv').config(); // Загружаем переменные окружения из .env
+require('dotenv').config();
 
 const { createMaxBot } = require('max-bot-sdk');
 
-// Инициализация бота
 const bot = createMaxBot({
-  token: process.env.BOT_TOKEN, // Токен бота из переменной окружения
+  token: process.env.BOT_TOKEN
 });
 
-// Приветственное сообщение (/start)
 bot.onText(/\/start/, async (ctx) => {
   await ctx.reply(`
 Вас приветствует бот школы плавания ProsWimming.ru.
@@ -25,34 +23,25 @@ bot.onText(/\/start/, async (ctx) => {
   await ctx.reply("Главная", { keyboard });
 });
 
-// Обработка выбора бассейна
 bot.onText(/Выбрать бассейн/i, async (ctx) => {
   await ctx.reply("Выберите ближайший к вам бассейн:");
-  // Тут можно добавить логику выбора бассейна
 });
 
-// Обработка стоимости занятий
 bot.onText(/Стоимость занятий/i, async (ctx) => {
   await ctx.reply("Стоимость занятий зависит от выбранного бассейна и программы обучения.");
-  // Тут можно добавить детализированную информацию о стоимости
 });
 
-// Обработка тренерского состава
 bot.onText(/Тренерский состав/i, async (ctx) => {
   await ctx.reply("Наши тренеры имеют многолетний опыт работы и международные сертификаты.");
-  // Тут можно добавить информацию о тренерах
 });
 
-// Обработка обращения к администратору
 bot.onText(/Администратор/i, async (ctx) => {
   await ctx.reply("Свяжитесь с нашим администратором по телефону: +7 (XXX) XXX-XX-XX");
 });
 
-// Обработка личного кабинета
 bot.onText(/Личный кабинет/i, async (ctx) => {
   await ctx.reply("Авторизация в личном кабинете доступна по ссылке: http://proswimming.ru/login");
 });
 
-// Запуск бота
 bot.launch();
 console.log("Bot is running...");
