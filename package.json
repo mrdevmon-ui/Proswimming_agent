@@ -1,1 +1,9 @@
-├── package.json
+{
+  "name": "my-max-bot",
+  "version": "1.0.0",
+  "description": "My MAX bot",
+  "main": "bot.py",
+  "dependencies": {
+    "max-bot-sdk": "^latest"
+  }
+}
