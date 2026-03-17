@@ -5,6 +5,6 @@
   "main": "index.js",
   "dependencies": {
     "max-bot-sdk": "^latest",
-    "dotenv": "^16.0.3" // Библиотека для работы с .env
+    "dotenv": "^16.0.3"
   }
 }
