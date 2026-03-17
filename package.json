@@ -4,7 +4,7 @@
   "description": "A simple bot for MAX messenger using Max Bot SDK",
   "main": "index.js",
   "dependencies": {
-    "max-bot-sdk": "^latest",
+    "max-bot-sdk": "1.0.0",
     "dotenv": "^16.0.3"
   }
 }
