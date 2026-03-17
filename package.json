@@ -1,9 +1,10 @@
 {
   "name": "my-max-bot",
   "version": "1.0.0",
-  "description": "My MAX bot",
-  "main": "bot.py",
+  "description": "A simple bot for MAX messenger using Max Bot SDK",
+  "main": "index.js",
   "dependencies": {
-    "max-bot-sdk": "^latest"
+    "max-bot-sdk": "^latest",
+    "dotenv": "^16.0.3" // Библиотека для работы с .env
   }
 }
